@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Roman Yosi Music</title>
+</head>
+<body style="text-align:center;font-family:Arial;">
+  <h1>Roman Yosi</h1>
+  <p>Official Music Website</p>
+  <p>Mini Distributor Musik</p>
+</body>
+</html>
