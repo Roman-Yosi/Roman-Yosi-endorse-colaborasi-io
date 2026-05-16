@@ -1,0 +1,131 @@
+export default function RomanYosiMusicApp() {
+  const songs = [
+    {
+      title: "Ada Suara Dalam Otak",
+      duration: "03:24",
+      audio: "#",
+    },
+    {
+      title: "Ternyata Dia Cinta Tersembunyi",
+      duration: "04:10",
+      audio: "#",
+    },
+    {
+      title: "Engkaulah Dewi Sang Penebar Luka",
+      duration: "03:55",
+      audio: "#",
+    },
+  ];
+
+  const socialMenus = [
+    {
+      name: "YouTube Roman Yosi",
+      icon: "▶️",
+      url: "https://youtube.com/@romanyosi",
+    },
+    {
+      name: "TikTok Roman Yosi",
+      icon: "🎵",
+      url: "https://www.tiktok.com/@romanyosi",
+    },
+    {
+      name: "Spotify Roman Yosi",
+      icon: "🎧",
+      url:
+        "https://open.spotify.com/show/6maDEC1QEdbWgeHglnRKy2?si=3ouaAtEzRGWFsI6sErpwbg",
+    },
+    {
+      name: "Instagram @kromantv1",
+      icon: "📸",
+      url: "https://instagram.com/kromantv1",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white flex flex-col items-center p-4">
+      <div className="w-full max-w-md">
+        <div className="bg-gradient-to-b from-blue-700 to-black rounded-3xl p-6 shadow-2xl border border-blue-500/20">
+          <div className="flex flex-col items-center text-center">
+            <img
+              src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=800"
+              alt="Roman Yosi"
+              className="w-36 h-36 rounded-3xl object-cover shadow-lg"
+            />
+
+            <h1 className="text-3xl font-bold mt-4 tracking-wide">
+              Roman Yosi Music
+            </h1>
+
+            <p className="text-gray-300 mt-2 text-sm">
+              Official Music Streaming App
+            </p>
+
+            <button className="mt-5 bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-2xl font-semibold shadow-lg">
+              ▶ Play Music
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-6">
+          <h2 className="text-xl font-bold mb-4">Daftar Lagu</h2>
+
+          <div className="space-y-3">
+            {songs.map((song, index) => (
+              <div
+                key={index}
+                className="bg-zinc-900 rounded-2xl p-4 flex items-center justify-between shadow border border-zinc-800"
+              >
+                <div>
+                  <h3 className="font-semibold">{song.title}</h3>
+                  <p className="text-sm text-gray-400">Roman Yosi</p>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <span className="text-sm text-gray-400">
+                    {song.duration}
+                  </span>
+
+                  <button className="bg-blue-500 hover:bg-blue-600 transition px-4 py-2 rounded-xl text-sm font-medium">
+                    Play
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 mt-6">
+          {socialMenus.map((menu, index) => (
+            <a
+              key={index}
+              href={menu.url}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-zinc-900 rounded-2xl p-4 hover:bg-zinc-800 transition text-center border border-zinc-800"
+            >
+              <div className="flex flex-col items-center gap-2">
+                <div className="text-3xl">{menu.icon}</div>
+                <span className="text-sm">{menu.name}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-8 bg-zinc-900 rounded-3xl p-5 shadow-lg border border-zinc-800">
+          <h2 className="text-lg font-bold mb-3">Profil Artis</h2>
+
+          <p className="text-gray-300 leading-relaxed text-sm">
+            Roman Yosi adalah creator dan musisi independen dengan konsep musik
+            modern, dark aesthetic, dan indie pop digital. Ikuti Roman Yosi di
+            YouTube, TikTok, Spotify, dan Instagram @kromantv1 untuk rilisan
+            terbaru.
+          </p>
+        </div>
+
+        <div className="mt-6 text-center text-xs text-gray-500 pb-6">
+          © 2026 Roman Yosi Music App
+        </div>
+      </div>
+    </div>
+  );
+}
